@@ -45,15 +45,15 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .and().httpBasic();
     }
 
-    /*
+
     @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
-    } */
+    }
 
+    /*
     @Bean
     public PasswordEncoder getPasswordEncoder() {
         return NoOpPasswordEncoder.getInstance();
-    }
-
+    }*/
 }

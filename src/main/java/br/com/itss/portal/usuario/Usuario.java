@@ -1,5 +1,7 @@
 package br.com.itss.portal.usuario;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 
 @Entity
@@ -11,6 +13,7 @@ public class Usuario {
     private long id;
     @Column(unique=true)
     private String userName;
+    @JsonIgnore
     private String password;
     private boolean active;
     private String roles;
