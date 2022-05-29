@@ -1,0 +1,7 @@
+INSERT INTO usuarios (user_name,password,roles,active) VALUES('teste','123','USER',TRUE);
+INSERT INTO usuarios (user_name,password,roles,active) VALUES('otavio.santos','123456','USER',TRUE);
+INSERT INTO usuarios (user_name,password,roles,active) VALUES('andre.costa','123','USER',TRUE);
+INSERT INTO usuarios (user_name,password,roles,active) VALUES('bruna.santos','123','USER',TRUE);
+INSERT INTO usuarios (user_name,password,roles,active) VALUES('claudio.silva','123','USER',TRUE);
+INSERT INTO usuarios (user_name,password,roles,active) VALUES('danilo.guimaraes','123','USER',TRUE);
+INSERT INTO usuarios (user_name,password,roles,active) VALUES('eduarda.rosa','123','USER',TRUE);

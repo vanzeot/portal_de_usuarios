@@ -26,43 +26,22 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        /*
-        http.csrf().disable().authorizeRequests()
-		.antMatchers(HttpMethod.GET, "/").permitAll()
-		.anyRequest().authenticated()
-		.and().formLogin().permitAll()
-		.and().logout().logoutRequestMatcher(new AntPathRequestMatcher("/logout")); */
-
-        /* COM FORM PRESONALIZADO DE LOGIN
-        http.authorizeRequests()
-                .antMatchers("/admin").hasRole("ADMIN")
-                .antMatchers("/user").hasAnyRole("ADMIN","USER")
-                .antMatchers("/").permitAll()
-                .antMatchers("/login").permitAll()
-
-                .and()
-                .formLogin()
-                .loginPage("/login")
-                .defaultSuccessUrl("/usuarios", true)
-                //.failureUrl("/login.html?error=true")
-                .and()
-                .logout()
-                .logoutUrl("/perform_logout"); */
 
         http.authorizeRequests()
-
+                // Autenticar todas as requisições
                 .anyRequest().authenticated()
-
+                // Personalizar login
                 .and().formLogin()
                     .loginPage("/login")
                     .defaultSuccessUrl("/usuarios", true)
                     .failureUrl("/login?error=true")
                     .permitAll()
-
+                // Configurar logout
                 .and().logout()
                     .logoutUrl("/logout")
                     .invalidateHttpSession(true)
                     .logoutSuccessUrl("/login?logout=true")
+                // Configurar autneticação para basic
                 .and().httpBasic();
     }
 

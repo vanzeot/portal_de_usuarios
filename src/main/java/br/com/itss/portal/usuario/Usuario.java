@@ -9,8 +9,9 @@ public class Usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+    @Column(unique=true)
     private String userName;
-    private String pasword;
+    private String password;
     private boolean active;
     private String roles;
 
@@ -30,12 +31,12 @@ public class Usuario {
         this.userName = userName;
     }
 
-    public String getPasword() {
-        return pasword;
+    public String getPassword() {
+        return password;
     }
 
-    public void setPasword(String pasword) {
-        this.pasword = pasword;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public boolean isActive() {
