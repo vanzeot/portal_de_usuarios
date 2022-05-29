@@ -50,9 +50,20 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .logoutUrl("/perform_logout"); */
 
         http.authorizeRequests()
+
                 .anyRequest().authenticated()
-                .and().formLogin().defaultSuccessUrl("/usuarios", true)
-                    .permitAll().and().httpBasic();
+
+                .and().formLogin()
+                    .loginPage("/login")
+                    .defaultSuccessUrl("/usuarios", true)
+                    .failureUrl("/login?error=true")
+                    .permitAll()
+
+                .and().logout()
+                    .logoutUrl("/logout")
+                    .invalidateHttpSession(true)
+                    .logoutSuccessUrl("/login?logout=true")
+                .and().httpBasic();
     }
 
     /*

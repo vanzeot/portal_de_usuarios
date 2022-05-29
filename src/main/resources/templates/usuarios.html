@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Lista de Usuários</title>
 </head>
 <body>
   <h1>RECEBA, PAPAI!!!</h1>
+    <form th:action="@{/logout}" method="post">
+                <input type="submit" value="Sair" class="btn btn-primary" />
+    </form>
 </body>
 </html>
