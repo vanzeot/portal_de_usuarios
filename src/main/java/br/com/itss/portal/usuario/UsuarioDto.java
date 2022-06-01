@@ -6,10 +6,6 @@ public class UsuarioDto {
         return userName;
     }
 
-    public String getPassword() {
-        return password;
-    }
-
     public boolean isActive() {
         return active;
     }
@@ -19,7 +15,6 @@ public class UsuarioDto {
     }
 
     private String userName;
-    private String password;
     private boolean active;
     private String roles;
 
