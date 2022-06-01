@@ -15,6 +15,7 @@ public class UsuarioDto {
     }
 
     private String userName;
+    private String fullName;
     private boolean active;
     private String roles;
 
@@ -22,5 +23,6 @@ public class UsuarioDto {
         this.userName = usuario.getUserName();
         this.active = usuario.isActive();
         this.roles = usuario.getRoles();
+        this.fullName = usuario.getFullName();
     }
 }

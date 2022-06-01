@@ -13,7 +13,7 @@ public class Usuario {
     private long id;
     @Column(unique=true)
     private String userName;
-    @JsonIgnore
+    private String fullName;
     private String password;
     private boolean active;
     private String roles;
@@ -57,5 +57,9 @@ public class Usuario {
     public void setRoles(String roles) {
         this.roles = roles;
     }
+
+    public String getFullName() {        return fullName;    }
+
+    public void setFullName(String fullName) {        this.fullName = fullName;    }
 
 }
